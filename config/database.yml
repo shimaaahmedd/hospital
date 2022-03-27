@@ -14,12 +14,17 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 development:
-  <<: *default
+  adapter: mysql2
+  host: localhost
   database: hospital_development
+  username: root
+  password: root
+  socket: /var/run/mysqld/mysqld.sock
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -51,4 +56,4 @@ production:
   <<: *default
   database: hospital_production
   username: hospital
-  password: <%= ENV['root'] %>
+  password: root
