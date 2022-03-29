@@ -69,3 +69,8 @@ gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'cancancan'
 gem 'pundit'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor', '0.0.2'
+end
