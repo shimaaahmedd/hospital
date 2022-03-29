@@ -23,7 +23,7 @@ ActiveAdmin.register_page "Dashboard" do
     #   end
 
       column do
-        para "Welcome to Admin panel of the Hospito Reservation website."
+        para "Welcome to Admin panel of the Hospitlo Reservation website."
       end
     end
   end # content
